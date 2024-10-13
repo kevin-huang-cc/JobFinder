@@ -54,7 +54,7 @@ class GoogleJobScraper:
         return {'location': location, 'more_locations': more_locations, 'experience_level': experience_level}
 
     def save_job(self, job_data):
-            # Debugging: Find all jobs with the same learn_more_url
+        # Debugging: Find all jobs with the same learn_more_url
         matching_jobs = Job.objects.filter(learn_more_url=job_data['learn_more_url'])
     
         if matching_jobs.count() > 1:
