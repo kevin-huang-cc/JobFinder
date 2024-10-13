@@ -5,10 +5,8 @@ class Command(BaseCommand):
     help = 'Scrape jobs from Google Careers and store them in the database'
 
     def handle(self, *args, **kwargs):
-        print("Starting handle method")
         scraper = GoogleJobScraper()
-        value_ = 3
-        print(f"Calling scrape_multiple_pages with num_pages={value_}")
-        scraper.scrape_multiple_pages(num_pages=value_)  # Scrape 1 page
+        value_ = 2
+        scraper.scrape_multiple_pages(num_pages=value_)
 
         self.stdout.write(self.style.SUCCESS('Successfully scraped and stored jobs!'))
